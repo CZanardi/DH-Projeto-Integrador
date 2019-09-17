@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Fabricantes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <br>
+        <h1>Pegar o header da home</h1>
+        <br>
+    </header>
+    
+    <main>
+        <!-- Tabela com os Fabricantes adicionados anteriormente -->
+
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Razão Social</th>
+                    <th scope="col">Nome Fantasia</th>
+                    <th scope="col">Editar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>123.456.678.0001/12</td>
+                    <td>XXX LTDA</td>
+                    <td>Cliente 1</td>
+                    <td>
+                        <!-- Botão para acionar modal de exclusão -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
+                        Excluir Fabricante
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>123.456.678.0001/12</td>
+                    <td>YYY LTDA</td>
+                    <td>Cliente 2</td>
+                    <td>
+                            <!-- Botão para acionar modal de exclusão -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
+                            Excluir Fabricante
+                            </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>123.456.678.0001/12</td>
+                    <td>ZZZ LTDA</td>
+                    <td>Cliente 3</td>
+                    <td>
+                        <!-- Botão para acionar modal de exclusão -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirFabricante">
+                        Excluir Fabricante
+                        </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+        
+      
+      <!-- Modal excluir fabricante-->
+      <div class="modal fade" id="excluirFabricante" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir o Fabricante?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- Botão para acionar modal adcionar fabricante-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalFabricante">
+            Adicionar Fabricante
+        </button>
+      
+        <!-- Modal de adicionar fabricante-->
+        <div class="modal fade" id="modalFabricante" tabindex="-1" role="dialog" aria-labelledby="modalFabricante" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalFabricante">Cadastro de Fabricante</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <form action="fabricantes.html">
+                                <div class="form-group">
+                                    <label for="cnpj">CNPJ</label><br>
+                                    <input type="text" name="cnpj" id="cnpj" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="razaoSocial">Razão Social</label><br>
+                                    <input type="text" name="razaoSocial" id="razaoSocial" class="form-control"><br>
+                                </div>
+                                <div class="form-group"></div>
+                                    <label for="nomeFantasia">Nome Fantasia</label><br>
+                                    <input type="text" name="nomeFantasia" id="nomeFantasia" class="form-control"><br>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+        <br>
+        <h1>Pegar o footer da home (fazer link)</h1>
+        <br>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

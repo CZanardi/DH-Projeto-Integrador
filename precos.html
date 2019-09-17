@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Preços</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <br>
+        <h1>Pegar o header da home</h1>
+        <br>
+    </header>
+    
+    <main>
+        <!-- Tabela com os Fabricantes adicionados anteriormente -->
+
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Fabricante</th>
+                    <th scope="col">Cód. Produto</th>
+                    <th scope="col">Nome do Produto</th>
+                    <th scope="col">Quandidade</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Comissão</th>
+                    <th scope="col">Validade da tabela</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Fabricante 1</th>
+                    <th scope="row">123</th>
+                    <th scope="row">Tecido</th>
+                    <th scope="row">10 m2</th>
+                    <th scope="row">R$ 100</th>
+                    <th scope="row">R$5</th>
+                    <th scope="row">31/12/2019</th>
+                    <td>
+                        <!-- Botão para acionar modal de alteração -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alterarTabela">
+                        Alterar
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fabricante 1</th>
+                    <th scope="row">456</th>
+                    <th scope="row">Voal</th>
+                    <th scope="row">10 m2</th>
+                    <th scope="row">R$ 50</th>
+                    <th scope="row">R$2</th>
+                    <th scope="row">31/12/2019</th>
+                    <td>
+                        <!-- Botão para acionar modal de alteração -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alterarTabela">
+                        Alterar
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fabricante 2</th>
+                    <th scope="row">456</th>
+                    <th scope="row">Varão</th>
+                    <th scope="row">10 un</th>
+                    <th scope="row">R$ 500</th>
+                    <th scope="row">R$5</th>
+                    <th scope="row">31/12/2019</th>
+                    <td>
+                        <!-- Botão para acionar modal de alteração -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alterarTabela">
+                        Alterar
+                        </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+             
+      <!-- Modal alterar tabela-->
+    <div class="modal fade" id="alterarTabela" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                <h5 class="modal-title" id="alterarTabela">Alterar Tabela de Preços</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="precos.html">
+                        <div class="form-group">
+                            <label for="fabricante">Fabricante</label><br>
+                            <input type="text" name="fabricante" id="fabricante" class="form-control" placeholder="já deve vir preenchido"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="codProduto">Cód. Produto</label><br>
+                            <input type="text" name="codProduto" id="codProduto" class="form-control" placeholder="já deve vir preenchido"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="nomeProduto">Nome do Produto</label><br>
+                            <input type="text" name="nomeProduto" id="nomeProduto" class="form-control" placeholder="já deve vir preenchido"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="qtdProduto">Quandidade</label><br>
+                            <input type="text" name="qtdProduto" id="qtdProduto" class="form-control" placeholder="já deve vir preenchido"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="preco">Preço de Venda</label><br>
+                            <input type="text" name="preco" id="preco" class="form-control" placeholder="já deve vir preenchido"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="comissao">Comissão</label><br>
+                            <input type="text" name="comissao" id="comissao" class="form-control" placeholder="já deve vir preenchido"><br>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Botão para acionar modal adcionar tabela de preços-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPrecos">
+            Adicionar Tabela de Preços
+        </button>
+      
+        <!-- Modal -->
+        <div class="modal fade" id="modalPrecos" tabindex="-1" role="dialog" aria-labelledby="modalPrecos" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalPrecos">Cadastro de Tabela de Preços</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <form action="precos.html">
+                                <div class="form-group">
+                                    <label for="fabricante">Fabricante</label><br>
+                                    <input type="text" name="fabricante" id="fabricante" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="codProduto">Cód. Produto</label><br>
+                                    <input type="text" name="codProduto" id="codProduto" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nomeProduto">Nome do Produto</label><br>
+                                    <input type="text" name="nomeProduto" id="nomeProduto" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="qtdProduto">Quandidade</label><br>
+                                    <input type="text" name="qtdProduto" id="qtdProduto" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preco">Preço de Venda</label><br>
+                                    <input type="text" name="preco" id="preco" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comissao">Comissão</label><br>
+                                    <input type="text" name="comissao" id="comissao" class="form-control"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label for="validadeTabela">Validade da Tabela</label><br>
+                                    <input type="text" name="validadeTabela" id="validadeTabela" class="form-control"><br>
+                                </div>
+                            </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+        <br>
+        <h1>Pegar o footer da home</h1>
+        <br>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
