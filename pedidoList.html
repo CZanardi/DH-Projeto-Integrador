@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pedidos de Venda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <br>
+        <h1>Pegar o header da home</h1>
+        <br>
+    </header>
+    
+    <main>
+        <!-- PedidoList -->
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">PEDCODI</th>
+                    <th scope="col">EMISSAO</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">CLIENTE</th>
+                    <th scope="col">VALOR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">5200001</th>
+                    <td>01/09/2019</td>
+                    <td>CONCLUIDO</td>
+                    <td>ABC TECIDOS E DECORACOES</td>
+                    <td>10.000,00</td>
+                    <td>
+                        <!-- Botão para acionar modal de visualização -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+                        Visualizar
+                        </button>
+                        <!-- Botão para acionar modal de alteração -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+                          Alterar
+                        </button>
+                        <!-- Botão para acionar modal de cancelamento -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cancelarPedido">
+                          Cancelar
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5200002</th>
+                    <td>05/09/2019</td>
+                    <td>CONCLUIDO</td>
+                    <td>LEROYA ABC BRICOLAGEM</td>
+                    <td>75.800,00</td>
+                    <td>
+                        <!-- Botão para acionar modal de visualização -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+                        Visualizar
+                        </button>
+                        <!-- Botão para acionar modal de alteração -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+                          Alterar
+                        </button>
+                        <!-- Botão para acionar modal de cancelamento -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cancelarPedido">
+                          Cancelar
+                        </button>
+
+                      </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5200003</th>
+                    <td>18/09/2019</td>
+                    <td>PENDENTE</td>
+                    <td>C&Z CASA E CONSTRUCAO</td>
+                    <td>25.500,00</td>
+                    <td>
+                        <!-- Botão para acionar modal de visualização -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+                        Visualizar
+                        </button>
+                        <!-- Botão para acionar modal de alteração -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+                          Alterar
+                        </button>
+                        <!-- Botão para acionar modal de cancelamento -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cancelarPedido">
+                          Cancelar
+                        </button>
+                      </td>
+                  </tr>
+                </tbody>
+        </table>
+      
+
+
+        <!-- Botão para acionar modal adicionar Pedido-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedido">
+            Novo Pedido
+        </button>
+        <!-- Botão para acionar modal Comissões-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#abc">
+            Minhas Comissões
+        </button>
+
+        
+        <!-- Modal -->
+        <!-- Modal cancelar Pedido -->
+        <div class="modal fade" id="cancelarPedido" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Atenção!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  Tem certeza que deseja cancelar o Pedido?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Modal Cadastro de Pedidos -->
+        <div class="modal fade" id="cadastroPedido" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="max-width: 1200px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cadastroPedido">Pedido de Venda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <form action="pedidoList.html">
+
+  
+                              <div class="row">
+                                <div class="form-group col-md-6" >
+                                  <label for="pedPedCodi">PEDCODI</label> 
+                                  <input type="text" name="pedPedCodi" id="pedPedCodi" class="form-control">
+                                </div>  
+                                <div class="form-group col-md-6">
+                                  <label for="pedDtEmissao">EMISSAO</label> 
+                                  <input type="text" name="pedPedCodi" id="pedPedCodi" class="form-control">
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="form-group" style="margin-left: 15px; margin-right: 15px; width:100%;" >
+                                  <label for="cliCNPJ">CNPJ</label>
+                                  <label for="cliNome" style="margin-left: 23.5%">CLIENTE</label><br>
+                                  <input style="float: left; max-width: 20%" type="text" name="cliCNPJ" id="cliCNPJ" class="form-control" placeholder="00.000.000/0000-00">
+                                  <button style="float: left; margin-left: 5px; max-width: 15%" type="button" class="btn btn-primary">buscar</button>        
+                                  <input style="float:left; margin-left: 5px; max-width: 70%" type="text" name="cliNome" id="cliNome" class="form-control">
+                                </div> 
+                              </div> 
+
+                              <div class="row">
+                                <div class="form-group" style="margin-left: 15px; margin-right: 15px; width:100%;" >
+                                  <label for="fabCNPJ">CNPJ</label>
+                                  <label for="fabNome" style="margin-left: 23.5%">FABRICANTE</label><br>
+                                  <input style="float: left; max-width: 20%" type="text" name="fabCNPJ" id="fabCNPJ" class="form-control" placeholder="00.000.000/0000-00">
+                                  <button style="float: left; margin-left: 5px; max-width: 15%" type="button" class="btn btn-primary">buscar</button>        
+                                  <input style="float:left; margin-left: 5px; max-width: 70%" type="text" name="fabNome" id="fabNome" class="form-control">
+                                </div> 
+                              </div> 
+  
+
+                              <div class="row">
+                                <div class="form-group" style="margin-left: 15px; margin-right: 15px; width:100%;" >
+                                  <label for="vendNome">VENDEDOR</label>
+                                  <label for="transpNome" style="margin-left: 29%">TRANSPORTADORA</label>
+                                  <label for="tabPrecoNome" style="margin-left: 23%">TABELA DE PREÇOS</label><br>
+                                  <input style="float: left; margin-left: 5px; max-width: 35%" type="text" name="vendNome" id="vendpNome" class="form-control">
+                                  <input style="float: left; margin-left: 5px; max-width: 35%" type="text" name="transpNome" id="transpNome" class="form-control">
+                                  <!-- <input style="float: left; margin-left: 5px; max-width: 25%" type="text" name="tabPrecoNome" id="tabPrecoNome" class="form-control"> -->
+                                  <div class="btn-group">
+                                    <!-- <button type="button" class="btn" style="margin-left: 5px;">PROMO BRICOLAGEM SET 2019</button> -->
+                                    <button style="margin-left: 5px;" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        PROMO BRICOLAGEM SET 2019
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">SETEMBRO 2019</a>
+                                        <a class="dropdown-item" href="#">PROMO BRICOLAGEM SET 2019</a>
+                                        <a class="dropdown-item" href="#">PROMO CLI 2019</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                  </div>
+
+                                </div> 
+                              </div> 
+
+                               <!-- Tabela com os Pedidos adicionados anteriormente -->
+                              <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">PRODCODI</th>
+                                      <th scope="col">DESCRICAO</th>
+                                      <th scope="col">QTDE</th>
+                                      <th scope="col">VALOR UNIT</th>
+                                      <th scope="col">D/A (%)</th>
+                                      <th scope="col">VALOR CALC</th>
+                                      <th scope="col">VALOR TOTAL</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">0130010</th>
+                                      <td>ARGOLA 20 MM - DOURADO</td>
+                                      <td>200</td>
+                                      <td>5,30</td>
+                                      <td>0</td>
+                                      <td>5,30</td>
+                                      <td>1.060,00</td>
+                                      <td>
+                                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
+                                            Alterar
+                                          </button>
+                                          <!-- Botão para acionar modal de cancelamento -->
+                                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirItemPedido">
+                                            Excluir
+                                          </button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1631116</th>
+                                        <td>RODIZIO ROMANO KIT (100 PC) - BRANCO</td>
+                                        <td>2000</td>
+                                        <td>10,16</td>
+                                        <td>0</td>
+                                        <td>10,16</td>
+                                        <td>20.320,00</td>
+                                        <td>
+                                            <!-- Botão para acionar modal de alterar Item de Pedido -->
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
+                                              Alterar
+                                            </button>
+                                            <!-- Botão para acionar modal de excluir Item de Pedido -->
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluirItemPedido">
+                                              Excluir
+                                            </button>
+                                        </td>
+                                      </tr>
+                                  </tbody>
+                                </table>                              
+                                <!-- Botão para acionar modal adicionar Item de  Pedido-->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroPedidoItem">
+                                    Novo Item
+                                </button>
+                            </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- Modal Cadastro Itens de Pedidos -->
+          <div class="modal fade" id="cadastroPedidoItem" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="cadastroPedidoItem">Itens do Pedido</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                              <form action="pedidoList.html">
+
+                                  <div class="row">
+                                      <div class="form-group" style="margin-left: 15px; margin-right: 15px; width:100%;" >
+                                        <label for="prodCodi">PRODCODI</label>
+                                        <label for="prodNome" style="margin-left: 23.5%">DESCRICAO</label><br>
+                                        <input style="float: left; max-width: 20%" type="text" name="prodCodi" id="prodCodi" class="form-control" placeholder="0000000">
+                                        <button style="float: left; margin-left: 5px; max-width: 15%" type="button" class="btn btn-primary">buscar</button>        
+                                        <input style="float:left; margin-left: 5px; max-width: 60%" type="text" name="prodNome" id="prodNome" class="form-control">
+                                      </div> 
+                                    </div> 
+  
+                                <div class="row">
+                                  <div class="form-group" style="margin-left: 15px; margin-right: 15px; width:100%;" >
+                                    
+                                    <label for="prodQtde">QTDE</label>
+                                    <label for="prodValorUnitario" style="margin-left: 5%">VALOR UNITARIO</label>
+                                    <label for="prodDesc" style="margin-left: 10%">D/A (%)</label>
+                                    <label for="prodValorCalculado" style="margin-left: 10%">VALOR CALCULADO</label>
+                                    <label for="prodValorTotal" style="margin-left: 10%">VALOR TOTAL</label><br>
+
+                                    <input style="float: left; margin-left: 5px; max-width: 20%" type="text" name="prodQtde" id="prodQtde" class="form-control">
+                                    <input style="float: left; margin-left: 5px; max-width: 20%" type="text" name="prodValorUnitario" id="prodValorUnitario" class="form-control">
+                                    <input style="float: left; margin-left: 5px; max-width: 20%" type="text" name="prodDesc" id="prodDesc" class="form-control">
+                                    <input style="float: left; margin-left: 5px; max-width: 20%" type="text" name="prodValorCalculado" id="prodValorCalculado" class="form-control">
+                                    <input style="float: left; margin-left: 5px; max-width: 20%" type="text" name="prodValorTotal" id="prodValorTotal" class="form-control">
+  
+                                  </div> 
+                                </div> 
+ 
+                              </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-primary">Salvar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>       
+
+
+    </main>
+    
+    <footer>
+        <br>
+        <h1>Pegar o footer da home</h1>
+        <br>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
