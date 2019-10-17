@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "nome": "teste",
+      "email": "teste@gmail.com",
+      "senha": "123",
+      "nivelAcesso": 0
+    },
+    {
+      "nome": "teste2",
+      "email": "teste2@gmail.com",
+      "senha": "teste",
+      "nivelAcesso": 0
+    },
+    {
+      "nome": "Victor",
+      "email": "abirosvado@gmail.com",
+      "senha": "1234",
+      "nivelAcesso": 0
+    },
+    {
+      "nome": "novo usuario dia 17",
+      "email": "novousuariodia@gmail.com",
+      "senha": "1234",
+      "nivelAcesso": 0
+    },
+    {
+      "nome": "Higor",
+      "email": "hi@gor.com",
+      "senha": "123456",
+      "nivelAcesso": 0
+    },
+    {
+      "nome": "Abirosvaldo",
+      "email": "abirosvaldo@gmail.com",
+      "senha": "$2y$10$icL2PiBDMYvTwgfbqE39mOBH3UGPXbbI6a1rheKjlWkdxS7oHX6o2",
+      "nivelAcesso": 0
+    }
+  ]
+}
