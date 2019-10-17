@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aula 06</title>
+    <title>Workdesk - O Sistema do Representante Moderno!</title>
     <!-- CDN Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
@@ -37,13 +37,13 @@
                         <a class="nav-link" href="#top" title="Acessar início">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
+                        <a class="nav-link" href="#myCarousel">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#produto">Produtos</a>
+                        <a class="nav-link" href="#produto">Planos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
+                        <a class="nav-link" href="contato.php">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -55,7 +55,7 @@
         <section class="main-content d-flex justify-content-center align-items-center flex-column">
             <h1>Workdesk</h1>
             <p>Agora nós representamos você!</p>
-            <a href="login.html" class="btn btn-dark">Acesso</a>
+            <a href="login.php" class="btn btn-dark">Acesso</a>
         </section>
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -101,7 +101,7 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>
+            </div>
         
 
         <section id="plus" class="plus">
@@ -109,10 +109,10 @@
                 <h1 class="col-12">Faça o teste!</h1>
                 <p class="col-10 offset-1">Experimente 30 dias grátis</p>
             </div>
-            <a href="login.html" class="btn btn-primary">Experimente!</a>
+            <a href="login.php" class="btn btn-primary">Experimente!</a>
         </section>
 
-            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="#produto">
+            <div id="produto" class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                 <h1 class="display-4">Planos</h1>
                 <p class="lead">Escolha o plano certo para a sua necessidade</p>
               </div>
@@ -190,10 +190,10 @@
         </div>
         <div class="col-md-4 col-xl-3">
           <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="cadastro.php">Cadastro</a></li>
+            <li><a href="contato.php">Contato</a></li>
           </ul>
         </div>
 

@@ -15,36 +15,6 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" href="cadastros.php">
-                  <span data-feather="home"></span>
-                  Cadastros <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="distribuidores.php">
-                  <span data-feather="file"></span>
-                  Distribuidores
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="fabricantes.php">
-                  <span data-feather="shopping-cart"></span>
-                  Fabricantes
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="produtos.php">
-                  <span data-feather="users"></span>
-                  Produtos
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="precos.php">
-                  <span data-feather="bar-chart-2"></span>
-                  Tabelas de preços
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link active" href="dashboard.php">
                   <span data-feather="layers"></span>
                   Relatórios

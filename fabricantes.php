@@ -46,12 +46,6 @@
                   <span data-feather="bell"></span>
                   Tabelas de preços
                 </a>
-                <li class="nav-item">
-                <a class="nav-link" href="dashboard.php">
-                  <span data-feather="layers"></span>
-                  Relatórios
-                </a>
-              </li>
               </li>
             </ul>
           </div>
